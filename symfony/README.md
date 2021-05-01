@@ -15,7 +15,7 @@ ls app
 You can open the PHP built in webserver to verify the installation.
 
 ```
-php -S localhost:8080 -t app/public
+php -S localhost:8081 -t app/public
 ```
 
 
