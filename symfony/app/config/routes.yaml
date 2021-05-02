@@ -1,6 +1,6 @@
-index:
-   path: /
-   controller: App\Controller\FirstController::index
+# index:
+#    path: /
+#    controller: App\Controller\FirstController::index
 
 hello:
     path: /hello-world
@@ -9,3 +9,8 @@ hello:
 hello-view:
     path: /hello-world-view
     controller: App\Controller\HelloWorldController::helloMessageView
+
+
+# dice:
+#     path: /dice
+#     controller: App\Controller\DiceController::diceGame
