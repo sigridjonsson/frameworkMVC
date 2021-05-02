@@ -8,15 +8,15 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  *
  */
-class DicePlayController extends AbstractController
+class HomeController extends AbstractController
 {
     /**
-     * @Route("/TEST", name="TEST")
+     * @Route("/home")
     */
-    public function playGame()
+    public function home()
     {
         return $this->render('layout.html.twig', [
-            'info' => "DiceGame!",
+            'info' => "Välkommen!",
         ]);
     }
 }

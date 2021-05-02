@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-namespace sigridjonsson\Dice;
-use sigridjonsson\Dice\Dice;
+namespace App\Dice;
+use App\Dice\Dice;
 
 /**
  * Class DiceHand.

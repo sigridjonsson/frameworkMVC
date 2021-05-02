@@ -5,26 +5,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-// use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-use sigridjonsson\Dice\Dice;
-use sigridjonsson\Dice\GraphicalDice;
+use App\Dice\Dice;
+use App\Dice\GraphicalDice;
 
 
-/**
- * @Route("/dice21", name="dice21_")
- */
 class DiceController extends AbstractController
 {
     /**
-     * @Route("/", name="welcome")
+     * @Route("/dice21", name="dice21")
     */
     public function welcome(SessionInterface $session, Request $request): Response
     {
-        // return $this->redirectToRoute('dice21_playGame');
-
         $session->set('total', 0);
         $session->set('win', $session->get('win') ?? 0);
         $session->set('winComp', $session->get('winComp') ?? 0);
@@ -34,14 +28,14 @@ class DiceController extends AbstractController
         if ($request->getMethod() == 'POST') {
             if ($request->get('diceChoice') == 'one') {
                 $session->set('diceNr', 'one');
-                return $this->redirectToRoute('dice21_playGame');
+                return $this->redirectToRoute('playGame');
             } else if ($request->get('diceChoice') == 'two') {
                 $session->set('diceNr', 'two');
-                return $this->redirectToRoute('dice21_playGame');
+                return $this->redirectToRoute('playGame');
             } else if ($request->get('zero') == 'Nollställ') {
                 $session->set('win', 0);
                 $session->set('winComp', 0);
-                return $this->redirectToRoute('dice21_welcome');
+                return $this->redirectToRoute('dice21');
             }
         } else {
             return $this->render('dice.html.twig', [
@@ -63,9 +57,9 @@ class DiceController extends AbstractController
 
         if ($request->getMethod() == 'POST') {
             if ($request->get('btn') == 'Stanna!') {
-                return $this->redirectToRoute('dice21_resGame');
+                return $this->redirectToRoute('resGame');
             } else if ($request->get('btn') == "Slå igen!") {
-                return $this->redirectToRoute('dice21_playGame');
+                return $this->redirectToRoute('playGame');
             }
         } else {
             $data = [];
@@ -79,7 +73,6 @@ class DiceController extends AbstractController
                     $res[] = $diceGraph->roll();
                     $class[] = $diceGraph->graphic();
                 }
-                // $_SESSION["total"] += $diceGraph->getLastRoll();
                 $something = $session->get('total');
                 $session->set('total', $something += $diceGraph->getLastRoll());
             } else if ($session->get('diceNr') == "two") {
@@ -87,7 +80,6 @@ class DiceController extends AbstractController
                     $res[] = $diceGraph->roll();
                     $class[] = $diceGraph->graphic();
                 }
-                // $_SESSION["total"] += array_sum($res);
                 $something = $session->get('total');
                 $session->set('total', $something += array_sum($res));
             }
@@ -104,9 +96,6 @@ class DiceController extends AbstractController
 
             return $this->render('diceGame.html.twig', [
                 'total' => $session->get('total'),
-                // 'win' => $session->get('win'),
-                // 'winComp' => $session->get('winComp'),
-                // 'diceNr' => $session->get('diceNr'),
                 'class' => $session->get('class'),
             ]);
         }
@@ -117,23 +106,16 @@ class DiceController extends AbstractController
     */
     public function resGame(SessionInterface $session)
     {
-        // $data = [];
-
         $session->set('totalComp', 0);
-        // $_SESSION["totalComp"] = 0;
 
         $diceComp = new Dice();
         while ($session->get('totalComp') <= 21) {
             $diceComp->roll();
             $something = $session->get('totalComp');
             $session->set('totalComp', $something += $diceComp->getLastRoll());
-            // $_SESSION["totalComp"] += $diceComp->getLastRoll();
         }
         $diff = 21 - $session->get('total');
         $diffComp = $session->get('totalComp') - 21;
-
-        // $data["diff"] = $diff;
-        // $data["diffComp"] = $diffComp;
 
 
         if ($session->get('total') == 21) {
@@ -161,10 +143,6 @@ class DiceController extends AbstractController
         return $this->render('diceGameRes.html.twig', [
             'total' => $session->get('total'),
             'totalComp' => $session->get('totalComp'),
-            // 'win' => $session->get('win'),
-            // 'winComp' => $session->get('winComp'),
-            // 'diff' => $diff,
-            // 'diffComp' => $diffComp,
             'message' => $message,
         ]);
     }

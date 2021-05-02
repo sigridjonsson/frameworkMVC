@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace sigridjonsson\Dice;
+namespace App\Dice;
 
 /**
  * Class Dice.
