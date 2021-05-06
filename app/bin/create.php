@@ -1,6 +1,6 @@
 <?php
 
-use Mos\Books\Books;
+use App\Entity\Books;
 
 require_once __DIR__ . "/bootstrap.php";
 

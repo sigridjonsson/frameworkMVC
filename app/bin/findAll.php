@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/bootstrap.php";
 
-$booksRepository = $entityManager->getRepository('\Mos\Books\Books');
+$booksRepository = $entityManager->getRepository('\App\Entity\Books');
 $books = $booksRepository->findAll();
 
 echo "All books\n--------------------\n";

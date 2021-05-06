@@ -8,7 +8,7 @@ if ($argc !== 2) {
 }
 
 $id = $argv[1];
-$books = $entityManager->find('\Mos\Books\Books', $id);
+$books = $entityManager->find('\App\Entity\Books', $id);
 
 if ($books === null) {
     echo "No book found.\n";

@@ -1,31 +1,44 @@
 <?php
 
-namespace Mos\Books;
+namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="books")
+ */
 class Books
 {
     /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      * @var int
      */
     protected $id;
 
     /**
+     * @ORM\Column(type="string")
      * @var string
      */
     protected $title;
 
     /**
+     * @ORM\Column(type="string")
      * @var int
      */
     protected $isbn;
 
     /**
+     * @ORM\Column(type="string")
      * @var string
      */
     protected $author;
 
     /**
-     * @var string§
+     * @ORM\Column(type="string")
+     * @var string
      */
     protected $picture;
 
