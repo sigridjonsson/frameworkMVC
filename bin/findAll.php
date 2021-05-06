@@ -2,17 +2,19 @@
 
 require_once __DIR__ . "/bootstrap.php";
 
-$productRepository = $entityManager->getRepository('\Mos\Product\Product');
-$products = $productRepository->findAll();
+$booksRepository = $entityManager->getRepository('\Mos\Books\Books');
+$books = $booksRepository->findAll();
 
-echo "All products\n--------------------\n";
+echo "All books\n--------------------\n";
 
-if ($products) {
-    foreach ($products as $product) {
+if ($books) {
+    foreach ($books as $book) {
         echo sprintf("%2d - %s (%d)\n",
-            $product->getId(),
-            $product->getName(),
-            $product->getValue()
+            $book->getId(),
+            $book->getTitle(),
+            $book->getISBN(),
+            $book->getAuthor(),
+            $book->getPicture()
         );
     }
 } else {

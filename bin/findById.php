@@ -8,15 +8,17 @@ if ($argc !== 2) {
 }
 
 $id = $argv[1];
-$product = $entityManager->find('\Mos\Product\Product', $id);
+$books = $entityManager->find('\Mos\Books\Books', $id);
 
-if ($product === null) {
-    echo "No product found.\n";
+if ($books === null) {
+    echo "No book found.\n";
     exit(1);
 }
 
 echo sprintf("%2d - %s (%d)\n",
-    $product->getId(),
-    $product->getName(),
-    $product->getValue()
+    $books->getId(),
+    $books->getTitle(),
+    $books->getISBN(),
+    $books->getAuthor(),
+    $books->getPicture()
 );

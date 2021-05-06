@@ -1,22 +1,26 @@
 <?php
 
-use Mos\Product\Product;
+use Mos\Books\Books;
 
 require_once __DIR__ . "/bootstrap.php";
 
-if ($argc !== 3) {
-    echo "Usage ${argv[0]} <name> <value>\n";
+if ($argc !== 5) {
+    echo "Usage ${argv[0]} <title> <isbn> <author> <picture>\n";
     exit(1);
 }
 
-$newProductName = $argv[1];
-$newProductValue = $argv[2];
+$newBookTitle = $argv[1];
+$newBookISBN = $argv[2];
+$newBookAuthor = $argv[3];
+$newBookPicture = $argv[4];
 
-$product = new Product();
-$product->setName($newProductName);
-$product->setValue($newProductValue);
+$books = new Books();
+$books->setTitle($newBookTitle);
+$books->setISBN($newBookISBN);
+$books->setAuthor($newBookAuthor);
+$books->setPicture($newBookPicture);
 
-$entityManager->persist($product);
+$entityManager->persist($books);
 $entityManager->flush();
 
-echo "Created Product with ID " . $product->getId() . "\n";
+echo "Created Book with ID " . $books->getId() . "\n";

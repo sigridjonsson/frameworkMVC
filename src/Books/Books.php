@@ -29,6 +29,11 @@ class Books
      */
     protected $picture;
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function getTitle()
     {
         return $this->title;
@@ -41,12 +46,12 @@ class Books
 
     public function getAuthor()
     {
-        return $this->$author;
+        return $this->author;
     }
 
     public function getPicture()
     {
-        return $this->$picture;
+        return $this->picture;
     }
 
     public function setTitle($title)
