@@ -25,7 +25,7 @@ class Books
     protected $title;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="integer")
      * @var int
      */
     protected $isbn;
