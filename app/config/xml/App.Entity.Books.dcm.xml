@@ -4,7 +4,7 @@
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
       <entity name="App\Entity\Books" table="books">
-          <id name="id" type="integer">
+          <id name="booksId" type="integer">
               <generator strategy="AUTO" />
           </id>
 

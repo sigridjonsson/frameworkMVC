@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -7,10 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-
 use App\Dice\GraphicalDice;
 use App\Entity\Highscore;
-
 
 class YatzyController extends AbstractController
 {
@@ -41,19 +40,19 @@ class YatzyController extends AbstractController
     */
     public function playGame(SessionInterface $session, Request $request)
     {
-        if($request->get('diceOne')){
+        if ($request->get('diceOne')) {
             $session->set('dice1', false);
         }
-        if($request->get('diceTwo')){
+        if ($request->get('diceTwo')) {
             $session->set('dice2', false);
         }
-        if($request->get('diceThree')){
+        if ($request->get('diceThree')) {
             $session->set('dice3', false);
         }
-        if($request->get('diceFour')){
+        if ($request->get('diceFour')) {
             $session->set('dice4', false);
         }
-        if($request->get('diceFive')){
+        if ($request->get('diceFive')) {
             $session->set('dice5', false);
         }
 
@@ -107,8 +106,6 @@ class YatzyController extends AbstractController
         $session->set('dice4', true);
         $session->set('dice5', true);
 
-
-        $resDices = [];
         if ($session->get('rounds') == 4) {
             $session->set('rounds', 1);
             $something = $session->get('section');

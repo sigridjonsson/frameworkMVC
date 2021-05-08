@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,7 +16,7 @@ class HighscoreController extends AbstractController
     */
     public function highscore()
     {
-        require_once "../bin/bootstrap.php";
+        // require_once "../bin/bootstrap.php";
 
         $highscoreRepository = $entityManager->getRepository('\App\Entity\Highscore');
         $highscore = $highscoreRepository->findBy([], ['score' => 'DESC']);

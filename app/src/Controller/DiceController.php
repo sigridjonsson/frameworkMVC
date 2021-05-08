@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -7,10 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
-
 use App\Dice\Dice;
 use App\Dice\GraphicalDice;
-
 
 class DiceController extends AbstractController
 {
@@ -37,15 +36,14 @@ class DiceController extends AbstractController
                 $session->set('winComp', 0);
                 return $this->redirectToRoute('dice21');
             }
-        } else {
-            return $this->render('dice.html.twig', [
-                'total' => $session->get('total'),
-                'win' => $session->get('win'),
-                'winComp' => $session->get('winComp'),
-                'diceNr' => $session->get('diceNr'),
-                'class' => $session->get('class'),
-            ]);
         }
+        return $this->render('dice.html.twig', [
+            'total' => $session->get('total'),
+            'win' => $session->get('win'),
+            'winComp' => $session->get('winComp'),
+            'diceNr' => $session->get('diceNr'),
+            'class' => $session->get('class'),
+        ]);
     }
 
 
@@ -61,44 +59,41 @@ class DiceController extends AbstractController
             } else if ($request->get('btn') == "Slå igen!") {
                 return $this->redirectToRoute('playGame');
             }
-        } else {
-            $data = [];
-
-            $diceGraph = new GraphicalDice();
-            $res = [];
-            $class = [];
-
-            if ($session->get('diceNr') == "one") {
-                for ($i = 0; $i < 1; $i++) {
-                    $res[] = $diceGraph->roll();
-                    $class[] = $diceGraph->graphic();
-                }
-                $something = $session->get('total');
-                $session->set('total', $something += $diceGraph->getLastRoll());
-            } else if ($session->get('diceNr') == "two") {
-                for ($i = 0; $i < 2; $i++) {
-                    $res[] = $diceGraph->roll();
-                    $class[] = $diceGraph->graphic();
-                }
-                $something = $session->get('total');
-                $session->set('total', $something += array_sum($res));
-            }
-
-            $session->set('class', $class);
-
-            if ($session->get('total') > 21) {
-                $something = $session->get('winComp');
-                $session->set('winComp', $something += 1);
-            } else if ($session->get('total') == 21){
-                $something = $session->get('win');
-                $session->set('win', $something += 1);
-            }
-
-            return $this->render('diceGame.html.twig', [
-                'total' => $session->get('total'),
-                'class' => $session->get('class'),
-            ]);
         }
+        $diceGraph = new GraphicalDice();
+        $res = [];
+        $class = [];
+
+        if ($session->get('diceNr') == "one") {
+            for ($i = 0; $i < 1; $i++) {
+                $res[] = $diceGraph->roll();
+                $class[] = $diceGraph->graphic();
+            }
+            $something = $session->get('total');
+            $session->set('total', $something += $diceGraph->getLastRoll());
+        } else if ($session->get('diceNr') == "two") {
+            for ($i = 0; $i < 2; $i++) {
+                $res[] = $diceGraph->roll();
+                $class[] = $diceGraph->graphic();
+            }
+            $something = $session->get('total');
+            $session->set('total', $something += array_sum($res));
+        }
+
+        $session->set('class', $class);
+
+        if ($session->get('total') > 21) {
+            $something = $session->get('winComp');
+            $session->set('winComp', $something += 1);
+        } else if ($session->get('total') == 21) {
+            $something = $session->get('win');
+            $session->set('win', $something += 1);
+        }
+
+        return $this->render('diceGame.html.twig', [
+            'total' => $session->get('total'),
+            'class' => $session->get('class'),
+        ]);
     }
 
     /**

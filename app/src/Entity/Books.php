@@ -16,7 +16,7 @@ class Books
      * @ORM\Column(type="integer")
      * @var int
      */
-    protected $id;
+    protected $booksId;
 
     /**
      * @ORM\Column(type="string")

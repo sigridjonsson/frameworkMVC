@@ -16,7 +16,7 @@ class Highscore
      * @ORM\Column(type="integer")
      * @var int
      */
-    protected $id;
+    protected $hsId;
 
     /**
      * @ORM\Column(type="int")
