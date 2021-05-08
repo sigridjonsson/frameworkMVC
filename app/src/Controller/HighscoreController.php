@@ -15,8 +15,14 @@ class HighscoreController extends AbstractController
     */
     public function highscore()
     {
-        return $this->render('layout.html.twig', [
+        require_once "../bin/bootstrap.php";
+
+        $highscoreRepository = $entityManager->getRepository('\App\Entity\Highscore');
+        $highscore = $highscoreRepository->findAll();
+
+        return $this->render('highscore.html.twig', [
             'info' => "Highscore!",
+            'highscore' => $highscore
         ]);
     }
 }

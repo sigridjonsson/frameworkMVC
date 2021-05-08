@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 use App\Dice\GraphicalDice;
+use App\Entity\Highscore;
 
 
 class YatzyController extends AbstractController
@@ -142,6 +143,9 @@ class YatzyController extends AbstractController
     */
     public function resGame(SessionInterface $session)
     {
+        require_once "../bin/bootstrap.php";
+
+
         if ($session->get('scoreYatzy') >= 63) {
             $score = $session->get('scoreYatzy');
             $session->set('scoreYatzy', $score + 50);
@@ -149,6 +153,18 @@ class YatzyController extends AbstractController
             och har därför gjort dig förtjänt av bonusen på 50 poäng.";
         } else if ($session->get('scoreYatzy') < 63) {
             $message = "Grattis!";
+        }
+
+        if ($session->get('scoreYatzy') >= 20) {
+            $message = "Highscore!";
+
+            // $time = new \DateTime();
+            $highscore = new Highscore();
+            $highscore->setScore($session->get('scoreYatzy'));
+            $highscore->setDate();
+
+            $entityManager->persist($highscore);
+            $entityManager->flush();
         }
 
         return $this->render('yatzyGameRes.html.twig', [

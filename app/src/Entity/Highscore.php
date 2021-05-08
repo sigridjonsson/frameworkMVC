@@ -51,6 +51,7 @@ class Highscore
 
     public function setDate()
     {
-        $this->updated = new \DateTime("now");
+        $time = new \DateTime("now");
+        $this->date = $time->format('d/m/Y H:i:s');
     }
 }
