@@ -1,0 +1,170 @@
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/config/preload.php
+--------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+--------------------------------------------------------------------------
+ 3 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 3 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 4 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 4 | ERROR | [x] Expected at least 1 space after "."; 0 found
+--------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+--------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/config/cli-config.php
+-----------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------
+ 1 | ERROR | [x] Header blocks must be separated by a single blank line
+-----------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/tests/bootstrap.php
+---------------------------------------------------------------------------
+FOUND 8 ERRORS AFFECTING 4 LINES
+---------------------------------------------------------------------------
+  5 | ERROR | [x] Expected at least 1 space before "."; 0 found
+  5 | ERROR | [x] Expected at least 1 space after "."; 0 found
+  7 | ERROR | [x] Expected at least 1 space before "."; 0 found
+  7 | ERROR | [x] Expected at least 1 space after "."; 0 found
+  8 | ERROR | [x] Expected at least 1 space before "."; 0 found
+  8 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 10 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 10 | ERROR | [x] Expected at least 1 space after "."; 0 found
+---------------------------------------------------------------------------
+PHPCBF CAN FIX THE 8 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+---------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/public/index.php
+------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 2 LINES
+------------------------------------------------------------------------
+  8 | ERROR | [x] Expected at least 1 space before "."; 0 found
+  8 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 10 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 10 | ERROR | [x] Expected at least 1 space after "."; 0 found
+------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Dice/DiceHand.php
+-----------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------
+ 5 | ERROR | [x] Header blocks must be separated by a single blank line
+-----------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/HomeController.php
+-----------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------
+ 1 | ERROR | [x] Header blocks must be separated by a single blank line
+-----------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/FirstController.php
+------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] Header blocks must be separated by a single blank line
+------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/BooksController.php
+------------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 2 LINES
+------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] Header blocks must be separated by a single blank line
+ 6 | ERROR | [x] Header blocks must be separated by a single blank line
+------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/HighscoreController.php
+----------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------------------------------
+ 1 | ERROR | [x] Header blocks must be separated by a single blank line
+----------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php
+-----------------------------------------------------------------------------------------
+FOUND 4 ERRORS AFFECTING 4 LINES
+-----------------------------------------------------------------------------------------
+  1 | ERROR | [x] Header blocks must be separated by a single blank line
+  9 | ERROR | [x] Header blocks must not contain blank lines
+ 12 | ERROR | [x] Header blocks must be separated by a single blank line
+ 92 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+-----------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-----------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php
+------------------------------------------------------------------------------------------
+FOUND 13 ERRORS AFFECTING 8 LINES
+------------------------------------------------------------------------------------------
+  1 | ERROR | [x] Header blocks must be separated by a single blank line
+  9 | ERROR | [x] Header blocks must not contain blank lines
+ 12 | ERROR | [x] Header blocks must be separated by a single blank line
+ 44 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 44 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+ 47 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 47 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+ 50 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 50 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+ 53 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 53 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+ 56 | ERROR | [x] Expected 1 space(s) after IF keyword; 0 found
+ 56 | ERROR | [x] Expected 1 space(s) after closing parenthesis; found 0
+------------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 13 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------------------
+
+
+FILE: /Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Kernel.php
+----------------------------------------------------------------------
+FOUND 20 ERRORS AFFECTING 7 LINES
+----------------------------------------------------------------------
+ 17 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 17 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 17 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 17 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 19 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 19 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 21 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 21 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 21 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 21 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 22 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 22 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 29 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 29 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 29 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 29 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 32 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 32 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 34 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 34 | ERROR | [x] Expected at least 1 space after "."; 0 found
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 20 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+Time: 868ms; Memory: 8MB
+

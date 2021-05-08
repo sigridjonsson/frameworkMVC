@@ -1,15 +1,3 @@
-.dice-utf8 .dice-1::after { content: "\2680"; }
-.dice-utf8 .dice-2::after { content: "\2681"; }
-.dice-utf8 .dice-3::after { content: "\2682"; }
-.dice-utf8 .dice-4::after { content: "\2683"; }
-.dice-utf8 .dice-5::after { content: "\2684"; }
-.dice-utf8 .dice-6::after { content: "\2685"; }
-
-.dice-utf8 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
 .dice-sprite {
     display: inline-block;
     padding: 0;
@@ -26,12 +14,24 @@
 .dice-sprite.dice-5 { background-position: -32px 0; }
 .dice-sprite.dice-6 { background-position: 0 0; }
 
+#diceOne {
+    margin-left: 9px;
+}
 
-#diceTwo,
-#diceThree,
-#diceFour,
+#diceTwo {
+    margin-left: 24px;
+}
+
+#diceThree {
+    margin-left: 24px;
+}
+
+#diceFour {
+    margin-left: 24px;
+}
+
 #diceFive {
-    margin-left: 11px;
+    margin-left: 24px;
 }
 
 table {

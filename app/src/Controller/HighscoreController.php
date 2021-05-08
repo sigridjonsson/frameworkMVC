@@ -18,10 +18,10 @@ class HighscoreController extends AbstractController
         require_once "../bin/bootstrap.php";
 
         $highscoreRepository = $entityManager->getRepository('\App\Entity\Highscore');
-        $highscore = $highscoreRepository->findAll();
+        $highscore = $highscoreRepository->findBy([], ['score' => 'DESC']);
 
         return $this->render('highscore.html.twig', [
-            'info' => "Highscore!",
+            'info' => "Highscore",
             'highscore' => $highscore
         ]);
     }

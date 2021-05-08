@@ -1,0 +1,22 @@
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/BooksController.php:21	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/BooksController.php:21	Avoid unused local variables such as '$entityManager'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php:40	The method welcome uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php:55	The method playGame() has a Cyclomatic Complexity of 10. The configured cyclomatic complexity threshold is 10.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php:64	The method playGame uses an else expression. Else clauses are basically not necessary and you can simplify the code by not using them.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php:65	Avoid unused local variables such as '$data'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php:76	Avoid unused local variables such as '$something'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/DiceController.php:114	Avoid unused local variables such as '$something'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/HighscoreController.php:20	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/HighscoreController.php:20	Avoid unused local variables such as '$entityManager'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php:42	The method playGame() has a Cyclomatic Complexity of 18. The configured cyclomatic complexity threshold is 10.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php:42	The method playGame() has an NPath complexity of 24576. The configured NPath complexity threshold is 200.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php:66	Avoid unused local variables such as '$something'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php:111	Avoid unused local variables such as '$resDices'.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php:163	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Controller/YatzyController.php:164	Avoid using undefined variables such as '$entityManager' which will lead to PHP notices.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Dice/DiceHand.php:28	Avoid using App\Dice\count() function in for loops.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Entity/Books.php:19	Avoid variables with short names like $id. Configured minimum length is 3.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Entity/Highscore.php:19	Avoid variables with short names like $id. Configured minimum length is 3.
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Entity/Highscore.php:54	Missing class import via use statement (line '54', column '21').
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Kernel.php:14	Avoid assigning values to variables in if clauses and the like (line '22', column '27').
+/Users/sigridjonsson/dbwebb-kurser/mvc/me/orm/app/src/Kernel.php:27	Avoid assigning values to variables in if clauses and the like (line '34', column '27').

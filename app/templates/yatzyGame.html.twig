@@ -6,15 +6,16 @@
 
 {% if section < 7 %}
 <h1>Samla på {{ section }}:or</h1>
-<p>Klicka i de tärningar du vill spara!</p>
+<br>
+<br>
+<h3>Klicka i de tärningar du vill spara!</h3>
 <p>Du får kasta tärningarna 3 gånger.
 Nu har du kastat {{ rounds }} gång/gånger.</p>
-<h3>Din poäng: {{ scoreYatzy }}</h3>
 
 
 <p class="dice-utf8">
     {% for value in listOfDices %}
-        <i class="{{ value }}"></i>
+        <i class="dice-sprite {{ value }}"></i>
     {% endfor %}
 </p>
 {% endif %}
@@ -44,5 +45,10 @@ Nu har du kastat {{ rounds }} gång/gånger.</p>
         <input type="submit" name="btn" value="Resultat!">
     </form>
 {% endif %}
+
+<br>
+<br>
+<br>
+<h3>Din poäng: {{ scoreYatzy }}</h3>
 
 {% endblock %}

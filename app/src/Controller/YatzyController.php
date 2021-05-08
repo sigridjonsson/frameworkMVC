@@ -155,10 +155,7 @@ class YatzyController extends AbstractController
             $message = "Grattis!";
         }
 
-        if ($session->get('scoreYatzy') >= 20) {
-            $message = "Highscore!";
-
-            // $time = new \DateTime();
+        if ($session->get('scoreYatzy') >= 50) {
             $highscore = new Highscore();
             $highscore->setScore($session->get('scoreYatzy'));
             $highscore->setDate();
