@@ -31,7 +31,7 @@ class Highscore
 
     public function getId()
     {
-        return $this->id;
+        return $this->hsId;
     }
 
     public function getScore()

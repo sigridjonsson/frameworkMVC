@@ -44,7 +44,7 @@ class Books
 
     public function getId()
     {
-        return $this->id;
+        return $this->booksId;
     }
 
     public function getTitle()
